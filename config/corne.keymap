@@ -24,11 +24,17 @@
             label = "SWITCH_TAB_RIGHT";
         };
 
-        swap_window: swap_window {
+        mac_win_cycle: mac_win_cycle_macro {
             compatible = "zmk,behavior-macro";
+            label = "MAC_WIN_CYCLE";
             #binding-cells = <0>;
-            bindings = <&kp LG(GRAVE)>;
-            label = "SWAP_WINDOW";
+            bindings
+                // 1. Press and HOLD the Left Command key
+                = <&macro_press &kp LGUI>
+                // 2. TAP the Grave key
+                , <&macro_tap &kp GRAVE>
+                // 3. RELEASE the Left Command key
+                , <&macro_release &kp LGUI>;
         };
     };
 
