@@ -28,7 +28,14 @@
             compatible = "zmk,behavior-macro";
             label = "MAC_WIN_CYCLE";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp GRAVE>, <&macro_pause_for_release>, <&macro_release &kp LGUI>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp GRAVE>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LGUI>;
         };
     };
 
@@ -38,9 +45,9 @@
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // | CTRL/ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  -   |
+            //                    | GUI | LWR | SPC/NAV |   | ENT | RSE  | ALT |
 
             display-name = "Base";
             bindings = <
@@ -53,9 +60,9 @@
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  -   |
+            // |      |     |     |     |     |     |   |  ^  |  4  |  5  |  6  |  =  |      |
+            // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |  \  |  `   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             display-name = "Lower";
@@ -69,10 +76,10 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |     |  !  |  @  |  {  |  }  |  |  |     |  &  |  * |  (  |  )  | BKSP |
-            // |     |  #  |  $  |  (  |  )  |  `  |     |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // |     |  %  |  * |  [  |  ]  |  ~  |     |  =  |  +  |  {  |  }  |  |  |  ~   |
-            //                       | GUI |     | SPC |     | ENT |     | ALT |
+            // |      |  !  |  @  |  {  |  }  |  |  |   |     |  &  |  *  |     |     | BKSP |
+            // |      |  #  |  $  |  (  |  )  |  `  |   |  -  |  =  |     |     |  \  |  `   |
+            // |      |  %  |  *  |  [  |  ]  |  ~  |   |  =  |  +  |     |     |     |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             display-name = "Raise";
             bindings = <
@@ -86,8 +93,8 @@
         nav {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // | BTCLR| BT0 | BT1 | BT3 | BT4 |     |   | LEFT| DOWN|  UP |RIGHT|     |  `   |
+            // | SHFT |     |     |     |     |     |   |WINCYC|TABLFT|TABRT|  ]  |  |  |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             display-name = "Nav";
