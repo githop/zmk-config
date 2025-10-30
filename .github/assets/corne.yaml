@@ -160,7 +160,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&app_window_switch'
   - '&switch_tab_left'
   - '&switch_tab_right'
   - '}'
