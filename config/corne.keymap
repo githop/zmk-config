@@ -23,6 +23,16 @@
             bindings = <&kp LG(LS(RIGHT_BRACKET))>;
             label = "SWITCH_TAB_RIGHT";
         };
+        app_window_switch: app_window_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_press   &kp LGUI // Press and hold Command (GUI)
+                &macro_tap     &kp GRAVE // Tap the Backtick key
+                &macro_release &kp LGUI // Release Command (GUI)
+            >;
+            label = "APP_WINDOW_SWITCH";
+        };
     };
 
     keymap {
@@ -87,7 +97,7 @@
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS          &kp KP_MULTIPLY    &kp LPAR   &kp RPAR  &kp BSPC
 &trans     &trans    &trans  &trans    &trans    &trans       &kp LEFT_ARROW  &kp DOWN          &kp UP_ARROW       &kp RIGHT  &trans    &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &trans          &switch_tab_left  &switch_tab_right  &kp RBRC   &kp PIPE  &kp TILDE
+&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &app_window_switch          &switch_tab_left  &switch_tab_right  &kp RBRC   &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE    &kp RET         &trans            &kp RALT
             >;
         };
