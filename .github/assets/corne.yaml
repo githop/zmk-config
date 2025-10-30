@@ -45,17 +45,17 @@ layers:
   - RALT
   Lower:
   - TAB
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - BT PRV
+  - BT NXT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR
   - '6'
   - '7'
   - '8'
   - '9'
   - '0'
-  - '-'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,11 +142,11 @@ layers:
   - (
   - )
   - BSPC
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT ARROW
   - DOWN
